@@ -10,6 +10,7 @@ public class NationalScholarshipPortalApplication {
 		SpringApplication.run(NationalScholarshipPortalApplication.class, args);
 		System.out.println("helllo");
 		// system
+		// my pro
 		
 	}
 
