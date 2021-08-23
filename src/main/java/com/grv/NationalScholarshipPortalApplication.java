@@ -8,7 +8,6 @@ public class NationalScholarshipPortalApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(NationalScholarshipPortalApplication.class, args);
-
 		System.out.println("helllo");
 
 		System.out.println("change");
