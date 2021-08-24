@@ -1,18 +1,38 @@
 package com.grv.model;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import javax.persistence.*;
 
-@EntityScan
+@Entity
 public class Student {
- 
+
+	@Id
+	@Column(name="student_id")
 	private int studentId;
+	
+	@Column(name="student_name")
 	private String studentName;
+	
+	@Column(name="gender")
 	private String gender;
+	
+	@Column(name="age")
 	private int age;
+	
+	@Column(name="email_id")
 	private String emailId;
+	
+	@Column(name="institution_code")
 	private String institutionCode;
+	
+	@Column(name="password")
 	private String password;
+	
+	@Column(name="scheme_id")
 	private int schemeId;
+	
+	public Student() {
+		super();
+	}
 	public Student(int studentId, String studentName, String gender, int age, String emailId, String institutionCode,
 			String password, int schemeId) {
 		super();
@@ -25,6 +45,9 @@ public class Student {
 		this.password = password;
 		this.schemeId = schemeId;
 	}
+	
+	
+
 	public int getStudentId() {
 		return studentId;
 	}
