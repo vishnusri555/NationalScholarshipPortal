@@ -8,13 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="education_details")
+@Embeddable
 public class EducationDetails {
 	
-	@Id
-	@Column(name="student_id")
-	private int studentId;
+
 
 	@Column(name="sslc_rollno")
 	private String sslcRollNo;
@@ -55,13 +52,7 @@ public class EducationDetails {
 	@Column(name="passing_year")
 	private Date passingYear;
 
-	public int getStudentId() {
-		return studentId;
-	}
-
-	public void setStudentId(int studentId) {
-		this.studentId = studentId;
-	}
+	
 
 	public String getSslcRollNo() {
 		return sslcRollNo;
