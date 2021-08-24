@@ -8,7 +8,7 @@ public class NationalScholarshipPortalApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(NationalScholarshipPortalApplication.class, args);
-		
+		// my own branch
 		
 	}
 
