@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Institution {
 
 	@Id
-	@Column(name="istitution_code")
+	@Column(name="institution_code")
 	private String institutionCode;
 	
 	@Column(name="institution_ame")

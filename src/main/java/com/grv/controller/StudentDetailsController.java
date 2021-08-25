@@ -2,6 +2,7 @@ package com.grv.controller;
 
 import java.util.List;
 
+import org.hibernate.type.descriptor.sql.JdbcTypeFamilyInformation.Family;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.grv.model.EducationDetails;
+import com.grv.model.FamilyDetails;
 import com.grv.service.StudentDetailService;
 
 @RestController
@@ -23,29 +25,5 @@ public class StudentDetailsController {
 	@Autowired
 	private StudentDetailService studentDetailService;
 	
-	@GetMapping("/getalleducationdetailsofallstudents")
-	public List<EducationDetails> getAllStudentsEducationDetails(){
-		return studentDetailService.getAllStudentsEducationDetails();
-	}
 	
-	@PostMapping("/addeducationdetailsofthestudent")
-	public void addEEducationDetailsOfStudent(@RequestBody EducationDetails educationDetail) {
-		studentDetailService.addEEducationDetailsOfStudent(educationDetail);
-	}
-	
-	@PutMapping("/updateEducationdetailsofstudent")
-	public void updateEducationDetailsOfStudent(@RequestBody EducationDetails educationDetail) {
-		studentDetailService.updateEducationDetailsOfStudent(educationDetail);
-	}
-	
-	@DeleteMapping("/deleteeducationdetails")
-	public void deletestudentById(@RequestBody EducationDetails educationDetail) {
-		studentDetailService.deletestudentById(educationDetail.getStudentId());
-	}
-	
-	@GetMapping("/geteducationdetailsbyid/{id}")
-	public EducationDetails getEducationDetailsById(@PathVariable("id") int id) {
-		System.out.println("path "+id);
-		return studentDetailService.getEducationDetailsById(id);
-	}
 }
