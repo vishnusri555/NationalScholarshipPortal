@@ -13,6 +13,4 @@ import com.grv.model.FamilyDetails;
 @Service
 public class StudentDetailService {
 
-
-	
 }

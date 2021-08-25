@@ -1,17 +1,14 @@
 package com.grv.model;
 
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="students_document")
+@Embeddable
 public class StudentDocument {
 
-	@Id
-	@Column(name="student_id")
-	private int studentId;
 	
 	@Column(name="student_photo")
 	private byte[] studentPhoto;

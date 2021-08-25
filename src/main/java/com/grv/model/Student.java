@@ -30,11 +30,20 @@ public class Student {
 	@Column(name="scheme_id")
 	private int schemeId;
 	
+	private EducationDetails educationDetails;
+	
+	private FamilyDetails familyDetails;
+	
+	private StudentDocument studentDocument;
+	
+	
 	public Student() {
 		super();
 	}
+
 	public Student(int studentId, String studentName, String gender, int age, String emailId, String institutionCode,
-			String password, int schemeId) {
+			String password, int schemeId, EducationDetails educationDetails, FamilyDetails familyDetails,
+			StudentDocument studentDocument) {
 		super();
 		this.studentId = studentId;
 		this.studentName = studentName;
@@ -44,9 +53,29 @@ public class Student {
 		this.institutionCode = institutionCode;
 		this.password = password;
 		this.schemeId = schemeId;
+		this.educationDetails = educationDetails;
+		this.familyDetails = familyDetails;
+		this.studentDocument = studentDocument;
 	}
-	
-	
+
+	public EducationDetails getEducationDetails() {
+		return educationDetails;
+	}
+	public void setEducationDetails(EducationDetails educationDetails) {
+		this.educationDetails = educationDetails;
+	}
+	public FamilyDetails getFamilyDetails() {
+		return familyDetails;
+	}
+	public void setFamilyDetails(FamilyDetails familyDetails) {
+		this.familyDetails = familyDetails;
+	}
+	public StudentDocument getStudentDocument() {
+		return studentDocument;
+	}
+	public void setStudentDocument(StudentDocument studentDocument) {
+		this.studentDocument = studentDocument;
+	}
 
 	public int getStudentId() {
 		return studentId;

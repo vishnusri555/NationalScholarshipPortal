@@ -15,15 +15,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.grv.model.EducationDetails;
-import com.grv.model.FamilyDetails;
-import com.grv.service.StudentDetailService;
+
 
 @RestController
 @RequestMapping("/NSPRest/api")
 public class StudentDetailsController {
 
-	@Autowired
-	private StudentDetailService studentDetailService;
 	
 	
 }

@@ -1,17 +1,17 @@
 package com.grv.model;
 
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="family_details")
-public class FamilyDetails{
 
-	@Id
-	@Column(name="student_id")
-	private int studentId;
+
+
+@Embeddable
+public class FamilyDetails {
+
 	
 	@Column(name="father_name")
 	private String fatherName;
@@ -34,13 +34,7 @@ public class FamilyDetails{
 	@Column(name="marital_status")
 	private String maritalStatus;
 
-	public int getStudentId() {
-		return studentId;
-	}
-
-	public void setStudentId(int studentId) {
-		this.studentId = studentId;
-	}
+	
 
 	public String getFatherName() {
 		return fatherName;
