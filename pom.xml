@@ -44,7 +44,7 @@
 		</dependency>
 	</dependencies>
 added a line with new
-	<build>
+	<build> added in main branch
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
